@@ -13,9 +13,9 @@ Set your environment variables into file `.env` and put them in the same directo
 - `GUILD_ID` - 6 digit value that can be obtained from your guild profile page
 - `POESESSID` - This is required to get guild members from your guild profile page. It's your POE Session ID that is stored in Cookie (google how to get it)
 
-URL Reference
-`https://discord.com/api/webhooks/{DISCORD_WEBHOOK_ID}/{DISCORD_WEBHOOK_HASH}`
-`https://www.pathofexile.com/guild/profile/{GUILD_ID}`
+URL Reference:
+- `https://discord.com/api/webhooks/{DISCORD_WEBHOOK_ID}/{DISCORD_WEBHOOK_HASH}`
+- `https://www.pathofexile.com/guild/profile/{GUILD_ID}`
 
 ## Execute
 
