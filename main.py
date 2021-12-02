@@ -20,6 +20,7 @@ DISCORD_WEBHOOK_ID = os.getenv('DISCORD_WEBHOOK_ID')
 DISCORD_WEBHOOK_HASH = os.getenv('DISCORD_WEBHOOK_HASH')
 GUILD_ID = os.getenv('GUILD_ID')
 POESESSID = os.getenv('POESESSID')
+LEAGUE = os.getenv('LEAGUE')
 
 if DISCORD_WEBHOOK_ID is None or DISCORD_WEBHOOK_HASH is None or GUILD_ID is None or POESESSID is None:
     env_vars = [DISCORD_WEBHOOK_ID, DISCORD_WEBHOOK_HASH, GUILD_ID, POESESSID]
@@ -38,14 +39,11 @@ POE_LADDER_URL = 'https://www.pathofexile.com/api/ladders'
 HTTP_HEADERS = { 'User-Agent': 'tojurnru:poe-guild-ranking' }
 COOKIES = dict(POESESSID=POESESSID)
 
-LEAGUE = 'Scourge'
-
 
 
 #
 # functions
 #
-
 
 def request_auto_retry(url):
     retry_count = 0
@@ -172,11 +170,9 @@ def generate_and_post_to_discord(member_entries):
 #
 
 member_list = get_guild_member_list()
-
 print(member_list)
 
 member_entries = get_rankings(member_list)
-
 print(member_entries)
 
 generate_and_post_to_discord(member_entries)
