@@ -52,11 +52,11 @@ def request_auto_retry(url):
             response = requests.get(url, headers = HTTP_HEADERS, cookies=COOKIES)
             status_code = response.status_code
 
-            if status_code >= 500:
+            if status_code >= 400:
                 raise ValueError(f'HTTP ERROR {status_code}, URL: {url}')
 
             print(f'        HTTP Response: {status_code}, URL: {url}')
-            sleep(5)
+            sleep(10)
             return response
 
         except Exception as error:
