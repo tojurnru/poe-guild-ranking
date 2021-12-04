@@ -143,7 +143,7 @@ def generate_and_post_to_discord(member_entries):
         character_class = entry['character']['class']
         depth = entry['character']['depth']['default']
 
-        col_account.append(f'{rank} {account_name}')
+        col_account.append(f'{account_name} ({rank})')
         col_character.append(f'{character_name} ({character_class})')
         col_depth.append(str(depth)) # convert to string
 
