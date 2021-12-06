@@ -165,6 +165,12 @@ def generate_and_post_to_discord(member_entries):
     sleep(1)
 
 
+def save_to_file(member_entries):
+    f = open('result.json', 'w+')
+    f.write(json.dumps(member_entries))
+    f.close()
+
+
 
 #
 # start
@@ -176,4 +182,5 @@ print(member_list)
 member_entries = get_rankings(member_list)
 print(member_entries)
 
-generate_and_post_to_discord(member_entries)
+# generate_and_post_to_discord(member_entries)
+save_to_file(member_entries)
